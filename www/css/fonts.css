@@ -28,3 +28,7 @@ li{
 input{
 	font-family: 'Open Sans', sans-serif;
 }
+
+.vline{
+	border-left: 1px solid grey;
+}
