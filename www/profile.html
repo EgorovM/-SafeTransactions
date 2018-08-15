@@ -22,13 +22,46 @@
 	</head>
 
 	<body>
-		
+		<header>
+			<nav class = "white" role="navigation">
+				<div class = "container">
+					<div class = "row">
+						<div class = "col s3">
+							<a class = "left green-text text-lighten-3" href = "index.html" > SafeTransations </a>
+						</div>
 
+						<div class = "col s4 dropdown-trigger right" data-target='dropdown1'>
+							<div class = "row right">
+								<div class = "col s9">
+									<p class = "right blue-text"> Мичил </a> 
+								</div>
+								<div class = "col s3">
+									<i class = "blue-text material-icons">arrow_drop_down</i>
+								</div>
+							</div>
+						</div>
+						<ul id='dropdown1' class='dropdown-content'>
+							<li><a href = "profile.html"> Профиль </a></li>
+							<li><a href = "editprofile.html"> Управление профилем </a></li>
+							<li><a href = "#!"> Выложить товар на аукцион </a></li>
+							<li><a href = "#!"> Прием заказов </a></li>
+							
+							<li class="divider" tabindex="-1"></li>
 
-		
+							<li><a href = "signout.html"> Выйти </a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/materialize.js"></script>
 		<script src="js/init.js"></script>
+
+		<script type="text/javascript">
+			$('.dropdown-trigger').dropdown();
+		</script>
 	</body>
 		
 
