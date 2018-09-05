@@ -1,55 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Аукцион</title>
-
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/fonts.css" type = "text/css" rel = "stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.alton.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-	</head>
-
-	<body>
-		<header>
-			<nav class = "white" role="navigation">
-				<div class = "container">
-					<div class = "row">
-						<div class = "col s3">
-							<a class = "left green-text text-lighten-3" href = "index.html" > SafeTransations </a>
-						</div>
-
-						<div class = "col s4 dropdown-trigger right" data-target='dropdown1'>
-							<div class = "row right">
-								<div class = "col s9">
-									<p class = "right blue-text"> Иван </a> 
-								</div>
-								<div class = "col s3">
-									<i class = "blue-text material-icons">arrow_drop_down</i>
-								</div>
-							</div>
-						</div>
-						<ul id='dropdown1' class='dropdown-content'>
-							<li><a href = "profile.html"> Профиль </a></li>
-							<li><a href = "editprofile.html"> Управление профилем </a></li>
-							<li><a href = "search.html"> Список продавцов </a></li>
-							<li><a href = "#!"> Выложить товар на аукцион </a></li>
-							<li><a href = "#!"> Прием заказов </a></li>
-
-							<li class="divider" tabindex="-1"></li>
-
-							<li><a href = "signout.html"> Выйти </a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+<?
+	include('notLoggedHeader.php');
+?>
 
 		<div class = "container">
 			<div class = "row center">
@@ -66,7 +17,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Торт медовый<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -86,7 +37,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Смузи<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -107,7 +58,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Пицца Неопалитано<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -129,7 +80,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Пицца Неопалитано<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -150,7 +101,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Торт медовый<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -170,7 +121,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Смузи<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -193,7 +144,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Торт медовый<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -213,7 +164,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Пицца Неопалитано<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -233,7 +184,7 @@
 
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Смузи<i class="material-icons right">more_vert</i></span>
-							<p><a href="pizza.html">Подробнее</a></p>
+							<p><a href="pizza.php">Подробнее</a></p>
 						</div>
 
 						<div class="card-reveal">
@@ -246,35 +197,13 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
-		
-		<footer class="page-footer green">
-			<div class="container">
-				<div class="row">
-					<div class="col s9 m9">
-						<h5 class="white-text">О проекте</h5>
-						<p class="grey-text text-lighten-4">С развитием IT-технологий пропорционально растет количество киберпреступлений. По данным с сайта МВД рост интернет-мошенничества вырос на 15% в 2017 г. Наш проект готов решить основые проблемы кибербезопасности. </p>
-					</div>
 
-					<div class="col s3 m3">
-						<h5 class="white-text">Обратная связь</h5>
-						<ul>
-							<li class="white-text">dya.sakhayana@yandex.ru</li>
-							<li class="white-text">valerii777999@gmail.com</li>
-							<li class="white-text">egorovmichil9@gmail.com</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-copyright">
-				<div class="container">
-					<p>ST - Безопасные сделки с проверенными продавцами</p>
-				</div>
-			</div>
-		</footer>
+		<?
+			include('footer.php');
+		?>
 
 		<script type="text/javascript">
 			$('.dropdown-trigger').dropdown();

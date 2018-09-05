@@ -1,47 +1,8 @@
-<!DOCTYPE html>
-<html>
+<?
+	include('notLoggedHeader.php');
+?>
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>SafeTrans</title>
-
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/fonts.css" type = "text/css" rel = "stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.alton.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-	</head>
-
-	<body>
-		<header>
-			<nav class = "white" role="navigation">
-				<div class = "container">
-					<div class = "row">
-						<a class = "left green-text text-lighten-3" href = "index.html" > SafeTransations </a>
-
-						<div class = "col s2 right">
-							<div class = "col s6">
-								<a class = "green-text text-lighten-3" href = "signin.html">  Войти </a>
-							</div>
-
-							<div class = "col s6">
-								<a class = "green-text text-lighten-3"  href = "registration.html">  Регистрация </a>
-							</div>
-						</div>
-
-						<div class = "col s3 right">
-							<a class = "waves-effect waves-light btn-small " href = "sohomode.html">  Режим продавца </a>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-		<div style="background-image:  url(https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/summer-campaign-2018-desktop_ru_RU.jpg);">
+		<div style="margin-top: -5px; background-image:  url(https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/summer-campaign-2018-desktop_ru_RU.jpg);">
 			<div class = "container">
 				<br><br><br><br><br><br>
 
@@ -67,7 +28,7 @@
 							</div>
 
 							<div class="input-field col s3">
-								<a href="search.html" class="waves-effect waves-light btn black-text" style = "width:100%;" id="icon_telephone" type="submit" class="validate"> Поиск
+								<a href="search.php" class="waves-effect waves-light btn black-text" style = "width:100%;" id="icon_telephone" type="submit" class="validate"> Поиск
 								</a>
 							</div>
 						</div>
@@ -88,7 +49,7 @@
 						<h5 class = "green-text"> Вы продавец?</h5>
 						<p> Раз так, то перейдите в режим продавца и подтвердите свою личность!</p>
 
-						<a class = "waves-effect waves-light btn-small " href = "sohomode.html">  Приступить </a>
+						<a class = "waves-effect waves-light btn-small " href = "sohomode.php">  Приступить </a>
 					</div>
 				</div>
 		</div>
@@ -119,31 +80,10 @@
 			</div>
 		</div>
 		<br>
-		<footer class="page-footer green">
-			<div class="container">
-				<div class="row">
-					<div class="col s9 m9">
-						<h5 class="white-text">О проекте</h5>
-						<p class="grey-text text-lighten-4">С развитием IT-технологий пропорционально растет количество киберпреступлений. По данным с сайта МВД рост интернет-мошенничества вырос на 15% в 2017 г. Наш проект готов решить основые проблемы кибербезопасности. </p>
-					</div>
-
-					<div class="col s3 m3">
-						<h5 class="white-text">Обратная связь</h5>
-						<ul>
-							<li class="white-text">dya.sakhayana@yandex.ru</li>
-							<li class="white-text">valerii777999@gmail.com</li>
-							<li class="white-text">egorovmichil9@gmail.com</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-copyright">
-				<div class="container">
-					<p>ST - Безопасные сделки с проверенными продавцами</p>
-				</div>
-			</div>
-		</footer>
+		
+		<?
+			include('footer.php');
+		?>
 
 
 		<script src="js/jquery.min.js"></script>

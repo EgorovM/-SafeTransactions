@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>SafeTrans</title>
-
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="css/fonts.css" type = "text/css" rel = "stylesheet">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.alton.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
-
-	</head>
-
-	<body class = "grey lighten-5">
-
-		<div class = "container white">
-			<div class = "row">
-				<div class = "col s2">
-					<a class = "green-text text-lighten-3" href = "index.html" > SafeTransations </a>
-				</div>
-			</div>
-		</div>
+<?
+	include('notLoggedHeader.php');
+?>
 
 		<div class = "container white">
 			<br>
@@ -47,7 +23,7 @@
 										<label for="first_name">Имя</label>
 									</div>
 
-									
+
 									<div class="input-field col s4">
 										<input class="active" id="last_name" type="text" class="validate">
 										<label for="last_name">Отчество</label>
@@ -93,7 +69,7 @@
 										</div>
 									</div>
 								</div>
-		
+
 
 								<div class="row">
 									<div class = "col s7">
@@ -134,7 +110,7 @@
 
 								<div class="row">
 									<div class="Button">
-										<a href="profile.html" class="waves-effect waves-light btn-small right regNow">Сохранить</a>
+										<a href="profile.php" class="waves-effect waves-light btn-small right regNow">Сохранить</a>
 									</div>
 								</div>
 							</form>
@@ -146,31 +122,9 @@
 		</div>
 		<br>
 
-		<footer class="page-footer green">
-			<div class="container">
-				<div class="row">
-					<div class="col s9">
-						<h5 class="white-text">О проекте</h5>
-						<p class="grey-text text-lighten-4">С развитием IT-технологий пропорционально растет количество киберпреступлений. По данным с сайта МВД рост интернет-мошенничества вырос на 15% в 2017 г. Наш проект готов решить основые проблемы кибербезопасности. </p>
-					</div>
+		<?
+			include('footer.php');
+		?>
 
-					<div class="col s3">
-						<h5 class="white-text">Обратная связь</h5>
-						<ul>
-							<li class="white-text">dya.sakhayana@yandex.ru</li>
-							<li class="white-text">valerii777999@gmail.com</li>
-							<li class="white-text">egorovmichil9@gmail.com</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-copyright">
-				<div class="container">
-					ST - Безопасные сделки с проверенными продавцами
-				</div>
-			</div>
-		</footer>
-		
 	</body>
 </html>
