@@ -23,6 +23,7 @@
 
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a class = "waves-effect waves-light btn-small " href = "sohomode.php">  Режим продавца </a></li>
+						<li><a href = "profile.php" style="width: 150px; text-align: center;">  Иван </a></li>
 				    </ul>
 
 
