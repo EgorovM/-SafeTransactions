@@ -4,7 +4,7 @@
 		include('notLoggedHeader.php');
 	} else {
 		include('header.php');
-	
+	}
 ?>
 
 	<div class = "row screen_mode">
@@ -399,8 +399,4 @@
 		</script>
 
 	</body>
-
-
-
-
 </html>
