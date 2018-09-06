@@ -61,7 +61,7 @@
 
 								<div class="row">
 									<div class="Button">
-										<a href="index.php" class="waves-effect waves-light btn-small right regNow">Зарегистрироваться</a>
+										<a href="index.php" class="waves-effect waves-light btn-small center regNow">Зарегистрироваться</a>
 									</div>
 								</div>
 							</form>

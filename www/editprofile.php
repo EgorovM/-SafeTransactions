@@ -66,6 +66,7 @@
 											<span>Аватарка</span>
 											<input type="file" multiple>
 										</div>
+
 										<div class="file-path-wrapper">
 											<input class="file-path validate" type="text" placeholder="Upload one or more files">
 										</div>
@@ -74,26 +75,14 @@
 
 
 								<div class="row">
-									<div class = "col s7">
-										<div class="input-field col s9">
+										<div class="input-field col s6">
 											<input class="active" id="contacts" type="text" class="validate">
 											<label for="password1">Контакты</label>
 										</div>
 
-										<div class="input-field col s3">
-											<a class = "btn"> Добавить </a>
+										<div class="input-field col s6">
+											<a class = "btn" style="width: 100%"> Добавить </a>
 										</div>
-									</div>
-
-									<div class = "col s5">
-										<div class = "row">
-											<p> shop.com <i class="close material-icons right">close</i></p>
-
-											<p> instagram.com/shop <i class="close material-icons right">close</i></p>
-
-											<p> vk.com/shop <i class="close material-icons right">close</i></p>
-										</div>
-									</div>
 								</div>
 
 								<div class="row">

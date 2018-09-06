@@ -2,7 +2,7 @@
 	include('notLoggedHeader.php');
 ?>
 
-		<div class = "container white">
+		<div class = "screen_mode container white">
 			<br>
 
 			<br>
@@ -27,7 +27,7 @@
 
 								<div class="row">
 									<div class="Button">
-										<a href="index.php" class="waves-effect waves-light btn-small right regNow">Стать продавцом</a>
+										<a href="index.php" class="waves-effect waves-light btn-small right regNow">Подать заявку</a>
 									</div>
 								</div>
 							</form>
@@ -38,6 +38,41 @@
 			<br>
 		</div>
 
+		<div class = "handheld_mode container white ">
+			<br>
+
+			<br>
+			<div class = "row ">
+				<div class = "col offset-s1 s10 grey lighten-5 z-depth-1">
+					<div class = "row center">
+						<br>
+						<h5 class = "green-text center"> Хотите продавать? Подтвердите свою личность! </h5>
+						<div class = "container">
+							<form>
+								<div class = "row">
+								
+									<input class="active" id="last_name" type="text" class="validate" placeholder = "Серия">
+									
+							
+
+	
+									<input class="active" id="first_name" type="text" class="validate" placeholder = "Номер">
+								
+							
+								</div>
+
+								<div class="row">
+									<div class="Button">
+										<a href="index.php" class="waves-effect waves-light btn-small center regNow ">Подать заявку</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
 		<?
 			include('footer.php');
 		?>
