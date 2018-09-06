@@ -47,9 +47,7 @@
 				</div>
 			</nav>
 		</header>
-
-	</body>
-	<main>
+		
 						<ul id='dropdown1' class='dropdown-content'>
 							<li><a href = "profile.php"> Профиль </a></li>
 							<li><a href = "editprofile.php"> Управление профилем </a></li>
@@ -61,6 +59,9 @@
 
 							<li><a class="logout"> Выйти </a></li>
 						</ul>
+	</body>
+	<main>
+						
 			
 		<script>
 			$('.dropdown-trigger').dropdown();
