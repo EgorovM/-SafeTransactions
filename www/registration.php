@@ -81,7 +81,6 @@
 
 								<div class="row">
 									<div class="Button">
-										<a href="index.php" class="waves-effect waves-light btn-small center regNow">Зарегистрироваться</a>
 										<a class="waves-effect waves-light btn-small right regNow">Зарегистрироваться</a>
 									</div>
 								</div>
@@ -97,6 +96,7 @@
 		<?
 			include('footer.php');
 		?>
+
 		<script>
 
 			$('.regNow').on('click',function(){

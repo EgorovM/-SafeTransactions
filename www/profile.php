@@ -1,7 +1,12 @@
 
-	<?
+<?
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
 		include('header.php');
-	?>
+	}
+?>
 
 	<div class = "row screen_mode">
 		<div class = "col s7 cyan">
@@ -14,142 +19,133 @@
 						<li class="tab col s3"><a href="#test3">Написать продавцу</a></li>
 						<li class="tab col s3"><a href="#test4">Аукцион</a></li>
 					</ul>
-<?
-	session_start();
-	if(empty($_SESSION['login'])){
-		include('notLoggedHeader.php');
-	} else {
-		include('header.php');
-	}
-?>
-	<br>
-	<div class = "container">
-		<div class = "container">
-			<div class = "row">
-				<div class = "col s6">
-					<img src = "media/avatars/egorov_michil@mail.ru.png" class = "responsive-img">
 				</div>
+			</div>
 
-				<div id="test1" class="col s12">
-					<ul class="collection">
-						<li class="collection-item avatar">
-							<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
-							<span class="title">Кровать двухярустная</span>
-							<p> Очень хороший продавец! Очень достойная кровать!<br>
-							<font class = "green-text">Рекомендую!</font>
-							</p>
-						</li>
-					</ul>
-					<ul class="collection">
-						<li class="collection-item avatar">
-							<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
-							<span class="title">Кровать двухярустная</span>
-							<p> Очень хороший продавец! Очень достойная кровать!</p>
-							<font class = "green-text">Рекомендую!</font>
-							</p>
-						</li>
-					</ul>
-					<ul class="collection">
-						<li class="collection-item avatar">
-							<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
-							<span class="title">Кровать двухярустная</span>
-							<p> Очень хороший продавец! Очень достойная кровать!<br>
-							<font class = "yellow-text">Более менее</font>
-							</p>
-						</li>
-					</ul>
-					<ul class="collection">
-						<li class="collection-item avatar">
-							<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
-							<span class="title">Кровать двухярустная</span>
-							<p> Очень хороший продавец! Очень достойная кровать!<br>
-							<font class = "red-text">Точно нет!</font>
-							</p>
-						</li>
-					</ul>
-				</div>
+			<div class = "container">
+				<div class = "row">
 
-				<div id="test2" class="col s12">
-					<br>
-					<div class = "col s12 white">
-						<form>
-							<div class = "row center">
-								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "product_name" placeholder="Название товара">
-								</div>
-								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<select>
-									    <option value="1">Рекомендую!</option>
-									    <option value="2">Более менее.</option>
-									    <option value="3">Точно нет!</option>
-									</select>
-								</div>
-								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "comment" placeholder="Комментарий">
-								</div>
-
-								<div class="Button">
-									<a href="profile.php" class="waves-effect waves-light btn-small center">Оставить отзыв</a>
-								</div>
-							</div>
-						</form>
+					<div id="test1" class="col s12">
+						<ul class="collection">
+							<li class="collection-item avatar">
+								<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
+								<span class="title">Кровать двухярустная</span>
+								<p> Очень хороший продавец! Очень достойная кровать!<br>
+								<font class = "green-text">Рекомендую!</font>
+								</p>
+							</li>
+						</ul>
+						<ul class="collection">
+							<li class="collection-item avatar">
+								<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
+								<span class="title">Кровать двухярустная</span>
+								<p> Очень хороший продавец! Очень достойная кровать!</p>
+								<font class = "green-text">Рекомендую!</font>
+								</p>
+							</li>
+						</ul>
+						<ul class="collection">
+							<li class="collection-item avatar">
+								<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
+								<span class="title">Кровать двухярустная</span>
+								<p> Очень хороший продавец! Очень достойная кровать!<br>
+								<font class = "yellow-text">Более менее</font>
+								</p>
+							</li>
+						</ul>
+						<ul class="collection">
+							<li class="collection-item avatar">
+								<img src="media/avatars/egorov_michil@mail.ru.png" alt="" class="circle">
+								<span class="title">Кровать двухярустная</span>
+								<p> Очень хороший продавец! Очень достойная кровать!<br>
+								<font class = "red-text">Точно нет!</font>
+								</p>
+							</li>
+						</ul>
 					</div>
-				</div>
 
-				<div id="test3" class="col s12">
-					<br>
-					<div class = "col s12 white">
-						<form>
-							<div class = "row center">
-								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "product_name" placeholder="Название товара">
-								</div>
-								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "comment" placeholder="Комментарий">
-								</div>
-								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "contact" placeholder="Ваши контакты">
-								</div>
-								<div class="Button">
-									<a href="profile.php" class="waves-effect waves-light btn-small center">Написать продавцу</a>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
+					<div id="test2" class="col s12">
+						<br>
+						<div class = "col s12 white">
+							<form>
+								<div class = "row center">
+									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
+										<input type = "text" id = "product_name" placeholder="Название товара">
+									</div>
+									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
+										<select>
+										    <option value="1">Рекомендую!</option>
+										    <option value="2">Более менее.</option>
+										    <option value="3">Точно нет!</option>
+										</select>
+									</div>
+									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
+										<input type = "text" id = "comment" placeholder="Комментарий">
+									</div>
 
-				<div id="test4" class="col s12">
-					<div class = "col s12 ">
-						<div class="slider">
-							<ul class="slides">
-								<li>
-									<img src="media/images/armchair.jpg">
-									<div class="caption center-align">
-										<h3>Кресло</h3>
-										<h5 class="light grey-text text-lighten-3">13600рб.</h5>
+									<div class="Button">
+										<a href="profile.php" class="waves-effect waves-light btn-small center">Оставить отзыв</a>
 									</div>
-								</li>
-								<li>
-									<img src="media/images/bed.jpg">
-									<div class="caption center-align">
-										<h3>Кровать</h3>
-										<h5 class="light grey-text text-lighten-3">4560рб.</h5>
-									</div>
-								</li>
-								<li>
-									<img src="media/images/table.jpg"> 
-									<div class="caption center-align">
-										<h3>Стол</h3>
-										<h5 class="light grey-text text-lighten-3">3000рб.</h5>
-									</div>
-								</li>
-							</ul>
+								</div>
+							</form>
 						</div>
 					</div>
-				</div>
 
+					<div id="test3" class="col s12">
+						<br>
+						<div class = "col s12 white">
+							<form>
+								<div class = "row center">
+									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
+										<input type = "text" id = "product_name" placeholder="Название товара">
+									</div>
+									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
+										<input type = "text" id = "comment" placeholder="Комментарий">
+									</div>
+									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
+										<input type = "text" id = "contact" placeholder="Ваши контакты">
+									</div>
+									<div class="Button">
+										<a href="profile.php" class="waves-effect waves-light btn-small center">Написать продавцу</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div id="test4" class="col s12">
+						<div class = "col s12 ">
+							<div class="slider">
+								<ul class="slides">
+									<li>
+										<img src="media/images/armchair.jpg">
+										<div class="caption center-align">
+											<h3>Кресло</h3>
+											<h5 class="light grey-text text-lighten-3">13600рб.</h5>
+										</div>
+									</li>
+									<li>
+										<img src="media/images/bed.jpg">
+										<div class="caption center-align">
+											<h3>Кровать</h3>
+											<h5 class="light grey-text text-lighten-3">4560рб.</h5>
+										</div>
+									</li>
+									<li>
+										<img src="media/images/table.jpg"> 
+										<div class="caption center-align">
+											<h3>Стол</h3>
+											<h5 class="light grey-text text-lighten-3">3000рб.</h5>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<br>
 			</div>
-			<br>
 		</div>
 
 		<div class = "col s5 blue">
