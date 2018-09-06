@@ -4,7 +4,7 @@
 
 		<div class = "container white">
 			<br>
-			<h5 class = "green-text center"> Редактирование профиля </h5>
+
 			<br>
 
 			<div class = "row">
@@ -13,6 +13,8 @@
 						<div class = "container">
 							<form>
 								<div class = "row">
+									<br>
+									<h5 class = "green-text center"> Редактирование профиля </h5>
 									<div class="input-field col s4">
 										<input class="active" id="last_name" type="text" class="validate">
 										<label for="last_name">Фамилия</label>

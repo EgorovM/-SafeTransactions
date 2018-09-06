@@ -2,27 +2,16 @@
 	include('notLoggedHeader.php');
 ?>
 
-		<div class = "container">
-			<div class = "row">
-						<div class = "col s11">
-							<h6 class = "right green-text text-lighten-3"> Уже зарегистрированы? </h6>
-						</div>
-
-						<div class = "col s1 left">
-							<a class = "waves-effect waves-light btn-small " href = "signin.php"> Войти </a>
-						</div>
-				</div>
-			</div>
-		</div>
-
 		<div class = "container white">
 			<br>
-			<h5 class = "green-text center"> Ещё не с нами? Присоединяйтесь! </h5>
+
 			<br>
 			<div class = "row">
 				<div class = "col offset-s1 s10 grey lighten-5 z-depth-1">
 					<div class = "row center">
 						<div class = "container">
+							<br>
+							<h5 class = "green-text center"> Ещё не с нами? Присоединяйтесь! </h5>
 							<form>
 								<div class = "row center">
 									<div class="input-field col s4">
@@ -87,6 +76,14 @@
 		<?
 			include('footer.php');
 		?>
+		<script>
 
+			$('.regNow').on('click',function(){
+
+				$.ajax();
+
+			});
+
+		</script>
 	</body>
 </html>

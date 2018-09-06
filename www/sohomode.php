@@ -4,11 +4,13 @@
 
 		<div class = "container white">
 			<br>
-			<h5 class = "green-text center"> Хотите продавать? Подтвердите свою личность! </h5>
+
 			<br>
 			<div class = "row">
 				<div class = "col offset-s1 s10 grey lighten-5 z-depth-1">
 					<div class = "row center">
+						<br>
+						<h5 class = "green-text center"> Хотите продавать? Подтвердите свою личность! </h5>
 						<div class = "container">
 							<form>
 								<div class = "row center">
