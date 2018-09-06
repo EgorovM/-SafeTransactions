@@ -18,14 +18,14 @@
 		<header>
 			<nav class = "white" role="navigation">
 				<div class="nav-wrapper">
-					<a class = "green-text text-lighten-3" href = "index.php" ><img style = "height: 100%; padding-left: 50px;" src="media/images/logo.png" alt = "SafeTrans">  </a>	
+					<a class = "green-text text-lighten-3" href = "index.php" ><img style = "height: 100%; padding-left: 50px;" src="media/images/logo.png" alt = "SafeTrans">  </a>
 					<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a class = "waves-effect waves-light btn-small " href = "sohomode.php">  Режим продавца </a></li>
 				    </ul>
 
-				    
+
 
 				   <ul id="mobile-demo" class="sidenav">
 						<li><div class="user-view">
@@ -47,22 +47,10 @@
 				</div>
 			</nav>
 		</header>
-
-						<ul id='dropdown1' class='dropdown-content'>
-							<li><a href = "profile.php"> Профиль </a></li>
-							<li><a href = "editprofile.php"> Управление профилем </a></li>
-							<li><a href = "search.php"> Список продавцов </a></li>
-							<li><a href = "#!"> Выложить товар на аукцион </a></li>
-							<li><a href = "#!"> Прием заказов </a></li>
-
-							<li class="divider" tabindex="-1"></li>
-
-							<li><a class="logout"> Выйти </a></li>
-						</ul>
 	</body>
 	<main>
-						
-			
+
+
 		<script>
 			$('.dropdown-trigger').dropdown();
 			$('.logout').on('click',function(){
