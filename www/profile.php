@@ -375,28 +375,7 @@
 		<script src="js/materialize.js"></script>
 		<script src="js/init.js"></script>
 
-		<script type="text/javascript">
-			$(document).ready(function(){
-			    $('.tooltipped').tooltip();
-			 });
-
-			$(document).ready(function(){
-			    $('.tabs').tabs();
-			});
-
-			$(document).ready(function(){
-			    $('select').formSelect();
-			});
-
-	        $(document).ready(function(){
-			    $('.slider').slider();
-			});
-
-			$(document).ready(function(){
-			    $('.sidenav').sidenav();
-			});
-
-		</script>
+		
 
 	</body>
 </html>

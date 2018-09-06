@@ -36,7 +36,7 @@
 								<a href="#email"><span class="white-text email">shop@mail.ru</span></a>
 						</div></li>
 
-						<li><a href="add_order.php"><i class = "material-icons">add</i>Товар на аукцион</a></li>
+						<li><a href="addorder.php"><i class = "material-icons">add</i>Товар на аукцион</a></li>
 					    <li><a href="search.php"  ><i class = "material-icons">format_list_bulleted</i>Cписок продавцов</a></li>
 					    <li><a href="editprofile.php" ><i class = "material-icons">settings</i>Редактировать профиль</a></li>
 					    <li><a href="checkorder.php"><i class = "material-icons">playlist_add_check</i>Проверить заказы</a></li>
