@@ -1,7 +1,11 @@
-
-	<?
+<?
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
 		include('header.php');
-	?>
+	}
+?>
 
 	<div class = "row screen_mode">
 		<div class = "col s7 cyan">
@@ -14,14 +18,7 @@
 						<li class="tab col s3"><a href="#test3">Написать продавцу</a></li>
 						<li class="tab col s3"><a href="#test4">Аукцион</a></li>
 					</ul>
-<?
-	session_start();
-	if(empty($_SESSION['login'])){
-		include('notLoggedHeader.php');
-	} else {
-		include('header.php');
-	}
-?>
+
 	<br>
 	<div class = "container">
 		<div class = "container">
@@ -137,7 +134,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="media/images/table.jpg"> 
+									<img src="media/images/table.jpg">
 									<div class="caption center-align">
 										<h3>Стол</h3>
 										<h5 class="light grey-text text-lighten-3">3000рб.</h5>
@@ -190,7 +187,7 @@
 						</div>
 
 					</div>
-				</div>	
+				</div>
 
 				<div class = "col s8 ">
 					<h4 class=" light-green-text accent-3 center">Подтвержден!</h4>
@@ -215,8 +212,8 @@
 							<a href="profile.php"><img class = "responsive-img circle" src = "media/avatars/egorov_michil@mail.ru.png"></a>
 							<h6 style = "line-height: 1.5em;" class = "white-text"> Иванов Иван </h6>
 							<p style = "line-height: 1.5em;" class = "white-text"> Продавец самодельной мебели </p>
-							
-						</div>	
+
+						</div>
 
 						<div class = "col s8 ">
 							<h4 class=" light-green-text accent-3 center">Подтвержден!</h4>
@@ -244,9 +241,9 @@
 						</div>
 					</div>
 				</div>
-				
 
-				<h4 class="black-text center"> Отзывы </h4>	
+
+				<h4 class="black-text center"> Отзывы </h4>
 				<div id="test1" class="col s12">
 					<ul class="collection">
 						<li class="collection-item avatar">
@@ -357,7 +354,7 @@
 									</div>
 								</li>
 								<li>
-									<img src="media/images/table.jpg"> 
+									<img src="media/images/table.jpg">
 									<div class="caption center-align">
 										<h3>Стол</h3>
 										<h5 class="light grey-text text-lighten-3">3000рб.</h5>
@@ -392,7 +389,7 @@
 			$(document).ready(function(){
 			    $('select').formSelect();
 			});
-        
+
 	        $(document).ready(function(){
 			    $('.slider').slider();
 			});
@@ -400,7 +397,7 @@
 			$(document).ready(function(){
 			    $('.sidenav').sidenav();
 			});
-        
+
 		</script>
 
 	</body>
