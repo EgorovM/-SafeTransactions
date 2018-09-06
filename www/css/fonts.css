@@ -32,3 +32,70 @@ input{
 .vline{
 	border-left: 1px solid grey;
 }
+
+.about_content{
+	padding: 150px 0;
+}
+
+@media all and  (max-width : 768px) {
+	.container {
+		width: 94%;
+		padding: 3%;
+	}
+	.aside {
+		width: 94%;
+		padding: 3%;        
+	}
+	a{
+		font-family: 'Open Sans', sans-serif;
+		font-size:11px;
+		line-height: 1em;
+
+	}
+	p{
+		font-family: 'Open Sans', sans-serif;
+		font-size:11px;
+		line-height: 1em;
+	}
+	h1{
+		font-family: 'Open Sans', sans-serif;
+		font-size:26px;
+		line-height: 1em;
+	}
+	h2{
+		font-family: 'Open Sans', sans-serif;
+		font-size:24px;
+		line-height: 1em;
+	}
+	h3{
+		font-family: 'Open Sans', sans-serif;
+		font-size:22px;
+		line-height: 1em;
+	}
+	h4{
+		font-family: 'Open Sans', sans-serif;
+		font-size:20px;
+		line-height: 1em;
+	}
+	h5{
+		font-family: 'Open Sans', sans-serif;
+		font-size:18px;
+		line-height: 1em;
+	}
+	h6{
+		font-family: 'Open Sans', sans-serif;
+		font-size:16px;
+		line-height: 1em;
+	}
+	li{
+		font-family: 'Open Sans', sans-serif;
+		font-size:11px;
+		line-height: 1em;
+	}
+	input{
+		font-family: 'Open Sans', sans-serif;
+		font-size:11px;
+		line-height: 1em;
+	}
+
+}
