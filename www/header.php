@@ -47,7 +47,7 @@
 				</div>
 			</nav>
 		</header>
-		
+
 						<ul id='dropdown1' class='dropdown-content'>
 							<li><a href = "profile.php"> Профиль </a></li>
 							<li><a href = "editprofile.php"> Управление профилем </a></li>
@@ -79,4 +79,3 @@
 
 			});
 		</script>
-		<main>
