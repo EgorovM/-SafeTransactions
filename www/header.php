@@ -50,7 +50,32 @@
 
 	</body>
 	<main>
+						<ul id='dropdown1' class='dropdown-content'>
+							<li><a href = "profile.php"> Профиль </a></li>
+							<li><a href = "editprofile.php"> Управление профилем </a></li>
+							<li><a href = "search.php"> Список продавцов </a></li>
+							<li><a href = "#!"> Выложить товар на аукцион </a></li>
+							<li><a href = "#!"> Прием заказов </a></li>
 
+							<li class="divider" tabindex="-1"></li>
 
+							<li><a class="logout"> Выйти </a></li>
+						</ul>
 			
-		
+		<script>
+			$('.dropdown-trigger').dropdown();
+			$('.logout').on('click',function(){
+
+				$.ajax({
+					url: "backend/logout.php",
+					type: "POST",
+					success: function(result){
+
+						location.reload()
+
+			    	}
+				});
+
+			});
+		</script>
+		<main>

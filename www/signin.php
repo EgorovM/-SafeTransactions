@@ -1,5 +1,10 @@
 <?
-	include('notLoggedHeader.php');
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
+		include('header.php');
+	}
 ?>
 
 
@@ -12,25 +17,32 @@
 							<br>
 							<form>
 								<div class = "row center">
-									<h5 class = "green-text"> Эл.почта и пароль? </h5>
+									<h5 class = "green-text"> Логин и пароль </h5>
 									<div class="row">
 										<div class="input-field col s12 ">
-											<input class="active" id="email" type="email" class="validate">
-											<label for="email">Эл. почта</label>
+											<input class="active" id="login" type="text" class="validate">
+											<label for="login">Логин</label>
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="input-field col s12">
-											<input class="active" id="password1" type="password" class="validate">
-											<label for="password1">Пароль</label>
+											<input class="active" id="password" type="password" class="validate">
+											<label for="password">Пароль</label>
 										</div>
 									</div>
+
+									<span class="alert">
+
+									</span>
+
+									<br>
+									<br>
 
 
 									<div class="row">
 										<div class="Button">
-											<a href="index.php" class="waves-effect waves-light btn-small right regNow">Войти</a>
+											<a class="waves-effect waves-light btn-small right regNow">Войти</a>
 										</div>
 									</div>
 								</div>
@@ -84,5 +96,37 @@
 		<?
 			include('footer.php');
 		?>
+		<script>
+
+			$('.regNow').on('click',function(){
+
+				$.ajax({
+					url: "backend/login.php",
+					type: "POST",
+					data: {
+
+						login: $('#login').val(),
+						password: $('#password').val()
+
+					},
+					success: function(result){
+						if(result[0] == 'В'){
+							location.href = '/';
+						}
+						else {
+							$('.alert').html(result);
+						}
+
+			    	},
+					error: function(){
+
+						alert('Ошибка. Повторите попытку позже!');
+
+					}
+				});
+
+			});
+
+		</script>
 	</body>
 </html>

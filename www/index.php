@@ -1,5 +1,10 @@
 <?
-	include('notLoggedHeader.php');
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
+		include('header.php');
+	}
 ?>
 
 		<div class = "screen_mode" style="background-size: cover;  background-image:  url(media/images/img1.jpg);">
@@ -147,7 +152,7 @@
 		</div>
 
 		<br>
-		
+
 		<?
 			include('footer.php');
 		?>

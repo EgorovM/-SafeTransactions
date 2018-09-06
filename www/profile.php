@@ -1,3 +1,4 @@
+
 	<?
 		include('header.php');
 	?>
@@ -13,6 +14,20 @@
 						<li class="tab col s3"><a href="#test3">Написать продавцу</a></li>
 						<li class="tab col s3"><a href="#test4">Аукцион</a></li>
 					</ul>
+<?
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
+		include('header.php');
+	}
+?>
+	<br>
+	<div class = "container">
+		<div class = "container">
+			<div class = "row">
+				<div class = "col s6">
+					<img src = "media/avatars/egorov_michil@mail.ru.png" class = "responsive-img">
 				</div>
 
 				<div id="test1" class="col s12">
