@@ -151,8 +151,9 @@
 			<div class = "row">
 				<nav class = "blue" role="navigation">
 					<div class="nav-wrapper">
-						<ul id="nav-mobile tabs" class="left hide-on-med-and-down">
-					    	<li><a class = "white-text tooltipped" href="addorder.php" data-position="left" data-tooltip="Выложить товар на аукцион"><i class = "material-icons">add</i></a></li>
+						<ul id="nav-mobile" class="left hide-on-med-and-down">
+							<li><a class = "white-text tooltipped" href="auction.php"  data-position="left" data-tooltip="Aукцион" ><i class = "material-icons">account_balance</i></a></li>
+					    	<li><a class = "white-text tooltipped" href="addorder.php" data-position="bottom" data-tooltip="Выложить товар на аукцион"><i class = "material-icons">add</i></a></li>
 					    	<li><a class = "white-text tooltipped" href="search.php" data-position="bottom" data-tooltip="Список продавцов"><i class = "material-icons">format_list_bulleted</i></a></li>
 					    	<li><a class = "white-text tooltipped" href="editprofile.php" data-position="bottom" data-tooltip="Настройки"><i class = "material-icons">settings</i></a></li>
 					    	<li><a class = "white-text tooltipped" href="checkorder.php" data-position="right" data-tooltip="Проверить заказы"><i class = "material-icons">playlist_add_check</i></a></li>

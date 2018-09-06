@@ -35,7 +35,8 @@
 								<a href="#name"><span class="white-text name">Иванов Иван</span></a>
 								<a href="#email"><span class="white-text email">shop@mail.ru</span></a>
 						</div></li>
-
+						
+						<li><a href="auction.php"><i class = "material-icons">account_balance</i>Аукцион</a></li>
 						<li><a href="addorder.php"><i class = "material-icons">add</i>Товар на аукцион</a></li>
 					    <li><a href="search.php"  ><i class = "material-icons">format_list_bulleted</i>Cписок продавцов</a></li>
 					    <li><a href="editprofile.php" ><i class = "material-icons">settings</i>Редактировать профиль</a></li>

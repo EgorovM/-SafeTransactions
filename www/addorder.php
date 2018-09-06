@@ -38,7 +38,7 @@
 									</div>
 								</div>
 
-								<div class = "row">
+								<div class = "row screen_mode">
 									<div class="input-field col s6">
 										<input class="active" id="last_name" type="text" class="validate">
 										<label for="last_name">Начальная цена: </label>
@@ -49,13 +49,25 @@
 										<label for="last_name">Окончательная цена: </label>
 									</div>	
 								</div>
+
+								<div class = "row headheld_mode">
+									<div class="input-field col s12">
+										<input class="active" id="last_name" type="text" class="validate">
+										<label for="last_name">Начальная цена: </label>
+									</div>
+
+									<div class="input-field col s12">
+										<input class="active" id="last_name" type="text" class="validate">
+										<label for="last_name">Окончательная цена: </label>
+									</div>	
+								</div>
 								<span class="alert">
 
 								</span>
 
-								<br>
-								<br>
-								<br>
+								<br class = "screen_mode">
+								<br class = "screen_mode">
+								<br class = "screen_mode">
 
 								<div class="row">
 									<div class="Button">
