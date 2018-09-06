@@ -1,5 +1,10 @@
 <?
-	include('notLoggedHeader.php');
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
+		include('header.php');
+	}
 ?>
 
 		<div class = "container white">
@@ -16,8 +21,8 @@
 									<br>
 									<h5 class = "green-text center"> Редактирование профиля </h5>
 									<div class="input-field col s4">
-										<input class="active" id="last_name" type="text" class="validate">
-										<label for="last_name">Фамилия</label>
+										<input class="active" id="mid_name" type="text" class="validate">
+										<label for="mid_name">Фамилия</label>
 									</div>
 
 									<div class="input-field col s4">
@@ -41,22 +46,22 @@
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="active" id="telephone" type="text" class="validate">
-										<label for="telephone">Номер телефона</label>
+										<input class="active" id="number" type="text" class="validate">
+										<label for="number">Номер телефона</label>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="active" id="shopname" type="text" class="validate">
-										<label for="shopname">Название магазина</label>
+										<input class="active" id="shop" type="text" class="validate">
+										<label for="shop">Название магазина</label>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="input-field col s12">
-										<input class="active" id="description" type="text" class="validate">
-										<label for="description">Краткое описание</label>
+										<input class="active" id="about" type="text" class="validate">
+										<label for="about">Краткое описание</label>
 									</div>
 								</div>
 
@@ -77,42 +82,43 @@
 									<div class = "col s7">
 										<div class="input-field col s9">
 											<input class="active" id="contacts" type="text" class="validate">
-											<label for="password1">Контакты</label>
-										</div>
-
-										<div class="input-field col s3">
-											<a class = "btn"> Добавить </a>
+											<label for="contacts">Контакты</label>
 										</div>
 									</div>
+								</div>
 
-									<div class = "col s5">
-										<div class = "row">
-											<p> shop.com <i class="close material-icons right">close</i></p>
+								<div class="row">
+									<div class="input-field col s12">
+										<input class="active" id="oldpassword" type="password" class="validate">
+										<label for="oldpassword">Старый пароль</label>
+									</div>
+								</div>
 
-											<p> instagram.com/shop <i class="close material-icons right">close</i></p>
-
-											<p> vk.com/shop <i class="close material-icons right">close</i></p>
-										</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<input class="active" id="password" type="password" class="validate">
+										<label for="password">Новый пароль</label>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="input-field col s12">
 										<input class="active" id="password1" type="password" class="validate">
-										<label for="password1">Новый пароль</label>
+										<label for="password1">Подтверждение пароля</label>
 									</div>
 								</div>
 
-								<div class="row">
-									<div class="input-field col s12">
-										<input class="active" id="password2" type="password" class="validate">
-										<label for="password2">Подтверждение пароля</label>
-									</div>
-								</div>
+								<span class="alert">
+
+								</span>
+
+								<br>
+								<br>
+								<br>
 
 								<div class="row">
 									<div class="Button">
-										<a href="profile.php" class="waves-effect waves-light btn-small right regNow">Сохранить</a>
+										<a class="waves-effect waves-light btn-small right regNow">Сохранить</a>
 									</div>
 								</div>
 							</form>
@@ -127,6 +133,51 @@
 		<?
 			include('footer.php');
 		?>
+
+		<script>
+
+			$('.regNow').on('click',function(){
+
+				if($('#password').val() != $('#password1').val()){
+
+					$('.alert').html("Пароли не совпадают!");
+					return;
+
+				};
+
+				$.ajax({
+					url: "backend/changeData.php",
+					type: "POST",
+					data: {
+
+						login: $('#login').val(),
+						email: $('#email').val(),
+						password: $('#oldpassword').val(),
+						newPassword: $('#oldpassword').val(),
+						name: $('#first_name').val(),
+						surname: $('#mid_name').val(),
+						last_name: $('#last_name').val(),
+						shop: $('#shop').val(),
+						contacts: $('#contacts').val(),
+						about: $('#about').val(),
+						number: $('#number').val()
+
+					},
+					success: function(result){
+
+						$('.alert').html(result);
+
+			    	},
+					error: function(){
+
+						alert('Ошибка. Повторите попытку позже!');
+
+					}
+				});
+
+			});
+
+		</script>
 
 	</body>
 </html>

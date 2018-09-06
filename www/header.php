@@ -42,10 +42,26 @@
 
 							<li class="divider" tabindex="-1"></li>
 
-							<li><a href = "signout.php"> Выйти </a></li>
+							<li><a class="logout"> Выйти </a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
+		<script>
+			$('.dropdown-trigger').dropdown();
+			$('.logout').on('click',function(){
+
+				$.ajax({
+					url: "backend/logout.php",
+					type: "POST",
+					success: function(result){
+
+						location.reload()
+
+			    	}
+				});
+
+			});
+		</script>
 		<main>

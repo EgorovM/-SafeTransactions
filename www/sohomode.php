@@ -1,5 +1,10 @@
 <?
-	include('notLoggedHeader.php');
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
+		include('header.php');
+	}
 ?>
 
 		<div class = "container white">

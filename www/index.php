@@ -1,5 +1,10 @@
 <?
-	include('notLoggedHeader.php');
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
+		include('header.php');
+	}
 ?>
 
 		<div style="margin-top: -5px; background-image:  url(https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/homepage/summer-campaign-2018-desktop_ru_RU.jpg);">
@@ -80,7 +85,7 @@
 			</div>
 		</div>
 		<br>
-		
+
 		<?
 			include('footer.php');
 		?>
