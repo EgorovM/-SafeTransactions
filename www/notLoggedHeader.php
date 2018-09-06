@@ -22,7 +22,7 @@
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 				        <li><a class = "waves-effect waves-light btn-small " href = "sohomode.php">  Режим продавца </a></li>
 				        <li style="min-width: 150px; text-align: center;"><a class = "green-text text-lighten-3"  href = "registration.php">  Регистрация </a></li>
-				        <li style="min-width: 150px; text-align: center;"><a class = "green-text text-lighten-3" href = "signin.php">  Войти </a></li>		
+				        <li style="min-width: 150px; text-align: center;"><a class = "green-text text-lighten-3" href = "signin.php">  Войти </a></li>
 				    </ul>
 				</div>
 			</nav>
@@ -44,8 +44,4 @@
 					    <li><a href="signout.php"><i class = "material-icons">exit_to_app</i> Выйти </a></li>
 			</ul>
 		</header>
-	</body>
 	<main>
-
-
-	<body>
