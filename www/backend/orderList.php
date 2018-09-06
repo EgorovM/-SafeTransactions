@@ -20,7 +20,7 @@
 
                 } else {
 
-
+                    json_encode(mysqli_fetch_all($result));
 
                 }
 
@@ -29,26 +29,21 @@
         } else
         if($_POST['type'] == 'got'){
 
-            if ($result = mysqli_query($link, "SELECT * FROM `orders` WHERE got = '{$_SESSION['login']}' AND id = '{$id}' AND made = '{$sUser}'")) {
+            if ($result = mysqli_query($link, "SELECT * FROM `orders` WHERE got = '{$_SESSION['login']}'")) {
 
                 $row = mysqli_fetch_assoc($result);
 
                 if(empty($row)){
 
-                    exit('У вас нет такой сделки!');
+                    exit('У вас нет сделок!');
 
                 } else {
 
-                    $result = mysqli_query($link, "UPDATE `orders` SET `statusG`='{$status}',`payStatusG`='{$payStatus}' WHERE  got = '{$_SESSION['login']}' AND id = '{$id}' AND made = '{$sUser}'");
+                    json_encode(mysqli_fetch_all($result));
 
                 }
 
             }
-
-        } else
-        if($_POST['type'] == 'do'){
-
-            $result = mysqli_query($link, "INSERT INTO `orders`(`made`, `got`, `text`, `contacts`) VALUES ('{$_SESSION['login']}','{$sUser}','{$text}','{$contacts}')");
 
         }
 

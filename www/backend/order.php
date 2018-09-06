@@ -1,14 +1,14 @@
 <?
 
-    $type = htmlspecialchars($_SESSION['type']);
-    $id = htmlspecialchars($_SESSION['id']);
-    $sUser = htmlspecialchars($_SESSION['sUser']);
-    $prod = htmlspecialchars($_SESSION['prod']);
-    $contacts = htmlspecialchars($_SESSION['contacts']);
-    $text = htmlspecialchars($_SESSION['text']);
-    $price = htmlspecialchars($_SESSION['price']);
-    $status = htmlspecialchars($_SESSION['status']);
-    $payStatus = htmlspecialchars($_SESSION['payStatus']);
+    $type = htmlspecialchars($_POST['type']);
+    $id = htmlspecialchars($_POST['id']);
+    $sUser = htmlspecialchars($_POST['sUser']);
+    $prod = htmlspecialchars($_POST['prod']);
+    $contacts = htmlspecialchars($_POST['contacts']);
+    $text = htmlspecialchars($_POST['text']);
+    $price = htmlspecialchars($_POST['price']);
+    $status = htmlspecialchars($_POST['status']);
+    $payStatus = htmlspecialchars($_POST['payStatus']);
 
     include('services/config.php');
 
@@ -16,7 +16,7 @@
 
     if(!empty($_SESSION['login'])){
 
-        if($_POST['type'] == 'make'){
+        if($type == 'make'){
 
             if ($result = mysqli_query($link, "SELECT * FROM `orders` WHERE got = '{$sUser}' AND id = '{$id}' AND made = '{$_SESSION['login']}'")) {
 
@@ -35,7 +35,7 @@
             }
 
         } else
-        if($_POST['type'] == 'get'){
+        if($type == 'get'){
 
             if ($result = mysqli_query($link, "SELECT * FROM `orders` WHERE got = '{$_SESSION['login']}' AND id = '{$id}' AND made = '{$sUser}'")) {
 
@@ -47,18 +47,36 @@
 
                 } else {
 
-                    $result = mysqli_query($link, "UPDATE `orders` SET `statusG`='{$status}',`payStatusG`='{$payStatus}' WHERE  got = '{$_SESSION['login']}' AND id = '{$id}' AND made = '{$sUser}'");
+                    $result = mysqli_query($link, "UPDATE `orders` SET `statusG`='{$status}',`payStatusG`='{$payStatus}' WHERE  got = '{$_SESSION['login']}' AND made = '{$sUser}'");
+                    $result = mysqli_query($link, "UPDATE `orders` SET `statusG`='{$status}',`payStatusG`='{$payStatus}' WHERE  made = '{$_SESSION['login']}' AND got = '{$sUser}'");
 
                 }
 
             }
 
         } else
-        if($_POST['type'] == 'do'){
+        if($type == 'do'){
 
-            $result = mysqli_query($link, "INSERT INTO `orders`(`made`, `got`, `text`, `contacts`) VALUES ('{$_SESSION['login']}','{$sUser}','{$text}','{$contacts}')");
+            $result = mysqli_query($link, "INSERT INTO `orders`(`made`, `got`, `text`, `prod`, `contacts`) VALUES ('{$_SESSION['login']}','{$sUser}','{$text}','{$prod}','{$contacts}')");
+
+        } else
+        if($type == 'no'){
+
+            $result = mysqli_query($link, "DELETE FROM `orders` WHERE got = '{$_SESSION['login']}' AND made = '{$sUser}'");
+            $result = mysqli_query($link, "DELETE FROM `orders` WHERE made = '{$_SESSION['login']}' AND got = '{$sUser}'");
+
+
+        } else
+        if($type == 'yes'){
+
+            $result = mysqli_query($link, "DELETE FROM `orders` WHERE got = '{$_SESSION['login']}' AND made = '{$sUser}'");
+            $result = mysqli_query($link, "DELETE FROM `orders` WHERE made = '{$_SESSION['login']}' AND got = '{$sUser}'");
 
         }
+
+    } else {
+
+        echo 'Войдите в аккаунт!';
 
     }
 

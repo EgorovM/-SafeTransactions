@@ -96,16 +96,16 @@
 							<form>
 								<div class = "row center">
 									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-										<input type = "text" id = "product_name" placeholder="Название товара">
+										<input type = "text" id = "product_name2" placeholder="Название товара">
 									</div>
 									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-										<input type = "text" id = "comment" placeholder="Комментарий">
+										<input type = "text" id = "comment2" placeholder="Комментарий">
 									</div>
 									<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-										<input type = "text" id = "contact" placeholder="Ваши контакты">
+										<input type = "text" id = "contact2" placeholder="Ваши контакты">
 									</div>
 									<div class="Button">
-										<a href="profile.php" class="waves-effect waves-light btn-small center">Написать продавцу</a>
+										<a class="waves-effect waves-light btn-small center regNow">Написать продавцу</a>
 									</div>
 								</div>
 							</form>
@@ -166,8 +166,9 @@
 			<div class = "row" >
 				<div class = "col s4 center">
 					<a href="profile.php"><img class = "responsive-img circle" src = "media/avatars/egorov_michil@mail.ru.png"></a>
-					<h6 style = "line-height: 0.4em;" class = "white-text"> Иванов Иван </h6>
-					<p style = "line-height: 1.5em;" class = "white-text"> Продавец самодельной мебели </p>
+					<h6 style = "line-height: 0.4em;" class = "white-text"><? echo $row['name'].' '.$row['surname']; ?> </h6>
+					<h6 style = "line-height: 0.4em; display: none" class = "white-text loginHolder"> <? echo $row['login']; ?> </h6>
+					<p style = "line-height: 1.5em;" class = "white-text"> <? echo $row['shop']; ?> </p>
 					<div class = "row">
 						<div class = "col s4">
 							<i class = "material-icons white-text">textsms</i>
@@ -191,7 +192,7 @@
 					<h4 class=" light-green-text accent-3 center">Подтвержден!</h4>
 
 					<div class = "container">
-						<p class = "white-text">Продаю самодельную мебель очень хорошего качества! Со мной можно связяться позвонив по номеру +79999999999 или написав на почту shop@mail.ru</p>
+						<p class = "white-text"> <? echo $row['about']; ?></p>
 					</div>
 				</div>
 			</div>
@@ -208,8 +209,8 @@
 					<div class = "row" >
 						<div class = "col s4 center">
 							<a href="profile.php"><img class = "responsive-img circle" src = "media/avatars/egorov_michil@mail.ru.png"></a>
-							<h6 style = "line-height: 1.5em;" class = "white-text"> Иванов Иван </h6>
-							<p style = "line-height: 1.5em;" class = "white-text"> Продавец самодельной мебели </p>
+							<h6 style = "line-height: 1.5em;" class = "white-text">  <? echo $row['name'].' '.$row['surname']; ?> </h6>
+							<p style = "line-height: 1.5em;" class = "white-text"> <? echo $row['shop']; ?> </p>
 
 						</div>
 
@@ -217,7 +218,7 @@
 							<h4 class=" light-green-text accent-3 center">Подтвержден!</h4>
 
 							<div class = "container">
-								<p class = "white-text">Продаю самодельную мебель очень хорошего качества! Со мной можно связяться позвонив по номеру +79999999999 или написав на почту shop@mail.ru</p>
+								<p class = "white-text"><? echo $row['about'] ?></p>
 							</div>
 							<div class = "row">
 								<div class = "col s4">
@@ -316,16 +317,16 @@
 						<form>
 							<div class = "row center">
 								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "product_name" placeholder="Название товара">
+									<input type = "text" id = "product_name1" placeholder="Название товара">
 								</div>
 								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "comment" placeholder="Комментарий">
+									<input type = "text" id = "comment1" placeholder="Комментарий">
 								</div>
 								<div class = "input-field offset-s1 col s10" style="border: 1px solid black; border-radius: 4px;">
-									<input type = "text" id = "contact" placeholder="Ваши контакты">
+									<input type = "text" id = "contact1" placeholder="Ваши контакты">
 								</div>
 								<div class="Button">
-									<a href="profile.php" class="waves-effect waves-light btn-small center">Написать продавцу</a>
+									<a class="waves-effect waves-light btn-small center regNow">Написать продавцу</a>
 								</div>
 							</div>
 						</form>
@@ -394,6 +395,33 @@
 
 			$(document).ready(function(){
 			    $('.sidenav').sidenav();
+			});
+
+			$('.regNow').on('click', function(){
+
+				$.ajax({
+					url: "backend/order.php",
+					type: "POST",
+					data: {
+
+						prod: $('#product_name2').val()+$('#product_name1').val(),
+						text: $('#comment2').val()+$('#comment1').val(),
+						contacts: $('#contact2').val()+$('#contact1').val(),
+						sUser: $('.loginHolder').html(),
+						type: 'do'
+					},
+					success: function(result){
+
+						console.log(result);
+
+			    	},
+					error: function(){
+
+						alert('Ошибка. Повторите попытку позже!');
+
+					}
+				});
+
 			});
 
 		</script>

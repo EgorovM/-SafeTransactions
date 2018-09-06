@@ -1,3 +1,8 @@
+<?
+	include('backend/services/config.php');
+	$result = mysqli_query($link, "SELECT * FROM `users` WHERE login = '{$_SESSION['login']}'");
+	$row = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,7 +28,7 @@
 
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a class = "waves-effect waves-light btn-small " href = "sohomode.php">  Режим продавца </a></li>
-						<li><a href = "profile.php" style="width: 150px; text-align: center;">  Иван </a></li>
+						<li><a href = "profile.php" style="width: 150px; text-align: center;"> <? echo $row['login'] ?></a></li>
 				    </ul>
 
 
@@ -34,8 +39,8 @@
 									<img src="media/images/table.jpg">
 								</div>
 								<a href="#user"><img class="circle" src="media/avatars/egorov_michil@mail.ru.png"></a>
-								<a href="#name"><span class="white-text name">Иванов Иван</span></a>
-								<a href="#email"><span class="white-text email">shop@mail.ru</span></a>
+								<a href="#name"><span class="white-text name"><? echo $row['name'].' '.$row['surname']; ?></span></a>
+								<a href="#email"><span class="white-text email"><? echo $row['shop']; ?></a>
 						</div></li>
 
 						<li><a href="addorder.php"><i class = "material-icons">add</i>Товар на аукцион</a></li>
@@ -43,7 +48,7 @@
 					    <li><a href="editprofile.php" ><i class = "material-icons">settings</i>Редактировать профиль</a></li>
 					    <li><a href="checkorder.php"><i class = "material-icons">playlist_add_check</i>Проверить заказы</a></li>
 					    <li><div class="divider"></div></li>
-					    <li><a href="signout.php"><i class = "material-icons">exit_to_app</i> Выйти </a></li>
+					    <li><a href="backend/logout.php"><i class = "material-icons">exit_to_app</i> Выйти </a></li>
 					</ul>
 				</div>
 			</nav>
