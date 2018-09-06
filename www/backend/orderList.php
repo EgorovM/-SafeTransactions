@@ -20,7 +20,7 @@
 
                 } else {
 
-                    $result = mysqli_query($link, "UPDATE `orders` SET `statusM`='{$status}',`payStatusM`='{$payStatus}' WHERE  got = '{$_SESSION['login']}' AND id = '{$id}' AND made = '{$sUser}'");
+
 
                 }
 
