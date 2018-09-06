@@ -68,7 +68,7 @@
 
 						<div class="card-reveal">
 							<span class="card-title grey-text text-darken-4">Пицца Неопалитано<i class="material-icons right">close</i></span>
-							<p>В состав входит: колбаса, сыр, ветчина, хз билбэтим</p>
+							<p>В состав входит: колбаса, сыр, ветчина</p>
 							<hr>
 							<p>Своя стоимость: 425 рб</p>
 							<p>Начальная цена: 350 рб</p>
@@ -90,7 +90,7 @@
 
 						<div class="card-reveal">
 							<span class="card-title grey-text text-darken-4">Пицца Неопалитано<i class="material-icons right">close</i></span>
-							<p>В состав входит: колбаса, сыр, ветчина, хз билбэтим</p>
+							<p>В состав входит: колбаса, сыр, ветчина</p>
 							<hr>
 							<p>Своя стоимость: 425 рб</p>
 							<p>Начальная цена: 350 рб</p>
@@ -174,7 +174,7 @@
 
 						<div class="card-reveal">
 							<span class="card-title grey-text text-darken-4">Пицца Неопалитано<i class="material-icons right">close</i></span>
-							<p>В состав входит: колбаса, сыр, ветчина, хз билбэтим</p>
+							<p>В состав входит: колбаса, сыр, ветчина</p>
 							<hr>
 							<p>Своя стоимость: 425 рб</p>
 							<p>Начальная цена: 350 рб</p>
