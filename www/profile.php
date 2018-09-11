@@ -8,7 +8,7 @@
 ?>
 
 	<div class = "row screen_mode">
-		<div class = "col s7 cyan">
+		<div class = "col s7 lime lighten-5">
 			<br>
 			<div class="row">
 				<div class="col s12">
@@ -147,9 +147,9 @@
 			</div>
 		</div>
 
-		<div class = "col s5 blue">
+		<div class = "col s5 green">
 			<div class = "row">
-				<nav class = "blue" role="navigation">
+				<nav class = "light-green" role="navigation">
 					<div class="nav-wrapper">
 						<ul id="nav-mobile" class="left hide-on-med-and-down">
 							<li><a class = "white-text tooltipped" href="auction.php"  data-position="left" data-tooltip="Aукцион" ><i class = "material-icons">account_balance</i></a></li>

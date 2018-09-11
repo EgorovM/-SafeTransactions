@@ -80,18 +80,16 @@
 
 
 								<div class="row">
-										<div class="input-field col s6">
-											<input class="active" id="contacts" type="text" class="validate">
-											<label for="password1">Контакты</label>
-										</div>
+									<div class="input-field col s6">
+										<input class="active" id="contacts" type="text" class="validate">
+										<label for="password1">Контакты</label>
+									</div>
 
-										<div class="input-field col s6">
-											<a class = "btn" style="width: 100%"> Добавить </a>
-										</div>
-											<label for="contacts">Контакты</label>
-										</div>
+									<div class="input-field col s6">
+										<a class = "btn" style="width: 100%"> Добавить </a>
 									</div>
 								</div>
+							
 
 								<div class="row">
 									<div class="input-field col s12">

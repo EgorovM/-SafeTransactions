@@ -19,16 +19,16 @@
 
 						<form>
 							<div class="row">
-								<div class="col s3 white" style="border: 1px solid black; border-radius: 4px;">
-									<input id="fastsearch-site" type="text" class="validate z-depth-1" placeholder="Название сайта">
+								<div class="col s3">
+									<input id="fastsearch-site" type="text" class="validate z-depth-1 white-text" placeholder="Название сайта">
 								</div>
 
-								<div class="col s3 white" style="border: 1px solid black; border-radius: 4px;">
-									<input id="fastsearch-contacts" type="text" class="validate z-depth-1" placeholder="Контакты продавца">
+								<div class="col s3">
+									<input id="fastsearch-contacts" type="text" class="validate z-depth-1 white-text" placeholder="Контакты продавца">
 								</div>
 
-								<div class="col s3 white oval" style="border: 1px solid black; border-radius: 4px;">
-									<input id="fastsearch-site" type="text" class="validate z-depth-1" placeholder="Данные продавца">
+								<div class="col s3">
+									<input id="fastsearch-site" type="text" class="validate z-depth-1 white-text" placeholder="Данные продавца">
 								</div>
 
 								<div class="input-field col s3">
