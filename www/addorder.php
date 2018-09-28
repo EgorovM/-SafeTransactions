@@ -1,6 +1,11 @@
-	<?
+<?
+	session_start();
+	if(empty($_SESSION['login'])){
+		include('notLoggedHeader.php');
+	} else {
 		include('header.php');
-	?>
+	}
+?>
 
 		<div class = "container white">
 			<br>
@@ -50,7 +55,7 @@
 									</div>	
 								</div>
 
-								<div class = "row headheld_mode">
+								<div class = "row handheld_mode">
 									<div class="input-field col s12">
 										<input class="active" id="last_name" type="text" class="validate">
 										<label for="last_name">Начальная цена: </label>
